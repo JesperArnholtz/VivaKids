@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { fetchPosts } from '../actions/posts';
+import Asset from './asset';
 
 class PostsIndex extends Component {
     componentWillMount() {
@@ -13,6 +14,9 @@ class PostsIndex extends Component {
             <h3>{post.fields.title}</h3>
             <p>{post.fields.description}</p>
             <p>{post.fields.blogImage.sys.id}</p>
+            <div className="image">
+            <Asset assetId={post.fields.blogImage.sys.id} />
+          </div>
           </article>
         );
       });
