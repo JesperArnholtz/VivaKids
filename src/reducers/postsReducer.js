@@ -1,4 +1,4 @@
-import { FETCH_POSTS } from '../actions/posts';
+import { FETCH_POSTS } from '../actions/blogs';
 const INITIAL_STATE = { all: [] };
 export default function(state = INITIAL_STATE, action) {
   switch(action.type) {

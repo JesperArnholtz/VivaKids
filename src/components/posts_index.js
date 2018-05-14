@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../actions/posts';
+import { fetchPosts } from '../actions/blogs';
 import Asset from './asset';
 
 class PostsIndex extends Component {
@@ -8,7 +8,8 @@ class PostsIndex extends Component {
       this.props.fetchPosts();
     }
     renderPosts() {
-      return this.props.posts.map((post, index) => {
+      
+      return this.props.blogs.map((post, index) => {
         return (
           <article key={post.sys.id}>
             <h3>{post.fields.title}</h3>
@@ -31,6 +32,6 @@ class PostsIndex extends Component {
     }
   }
   function mapStateToProps(state) {
-    return { posts: state.posts.all };
+    return { blogs: state.blogs.all };
   }
   export default connect(mapStateToProps, { fetchPosts })(PostsIndex);

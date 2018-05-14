@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchAsset } from '../actions/posts';
+import { fetchAsset } from '../actions/blogs';
 
 class Asset extends Component {
   componentWillMount() {
@@ -10,7 +10,7 @@ class Asset extends Component {
     return this.props.assets.map((asset) => {
       if (asset.sys.id == this.props.assetId) {
         return (
-          <img src={asset.fields.file.url} alt={asset.fields.file.fileName} key={`${asset.sys.id}`}/>
+          <img src={asset.fields.file.url} alt={asset.fields.file.fileName} key={`${asset.sys.id}`} width="400"/>
         );
       }
     });

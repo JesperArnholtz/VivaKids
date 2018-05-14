@@ -1,4 +1,4 @@
-import { FETCH_ASSET } from '../actions/posts';
+import { FETCH_ASSET } from '../actions/blogs';
 
 export default function(state = [], action) {
   switch(action.type) {
