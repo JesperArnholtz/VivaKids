@@ -14,7 +14,6 @@ class PostsIndex extends Component {
           <article key={post.sys.id}>
             <h3>{post.fields.title}</h3>
             <p>{post.fields.description}</p>
-            <p>{post.fields.blogImage.sys.id}</p>
             <div className="image">
             <Asset assetId={post.fields.blogImage.sys.id} />
           </div>
